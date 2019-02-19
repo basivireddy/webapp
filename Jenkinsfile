@@ -10,7 +10,7 @@ node(){
                   def app = docker.build "${env.CONTAINER_REPO}:${BRANCH}-${env.BUILD_NUMBER}"
          stage 'Docker push'
             echo 'Pushing docker image to ECH'
-                app.push()
+                app.push("basivireddy/${env.CONTAINER_REPO}:${BRANCH}-${env.BUILD_NUMBER}")
         
   }
 }
