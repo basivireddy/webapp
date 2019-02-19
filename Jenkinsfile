@@ -1,5 +1,5 @@
 #!groovy
-node('slv'){
+node(){
          stage 'Checkout'
             checkout scm
          docker.withRegistry('https://registry.hub.docker.com', 'docker-credentials'){
